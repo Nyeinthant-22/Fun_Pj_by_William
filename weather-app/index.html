@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather App</h1>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter city name..." />
+                <button id="searchBtn">🔍</button>
+            </div>
+        </div>
+
+        <div class="weather-container" id="weatherContainer">
+            <div class="welcome-message" id="welcomeMessage">
+                <h2>Welcome to Weather App!</h2>
+                <p>Search for a city to see current weather conditions</p>
+            </div>
+
+            <div class="weather-card" id="weatherCard" style="display: none;">
+                <div class="location">
+                    <h2 id="cityName"></h2>
+                    <p id="country"></p>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span id="temp"></span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weatherIcon" src="" alt="Weather Icon" />
+                    </div>
+                </div>
+
+                <div class="weather-description">
+                    <p id="description"></p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Feels like</span>
+                        <span id="feelsLike"></span>°C
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span id="humidity"></span>%
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind Speed</span>
+                        <span id="windSpeed"></span> m/s
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Pressure</span>
+                        <span id="pressure"></span> hPa
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <h3>City not found</h3>
+                <p>Please check the spelling and try again</p>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+        </div>
+
+        <div class="api-info">
+            <p><strong>Note:</strong> To use this app, you need to get a free API key from <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a> and add it to the script.js file.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

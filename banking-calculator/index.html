@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Calculator - Modern Financial Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">BankCalc</h1>
+            <p class="subtitle">Modern Financial Calculator</p>
+        </header>
+
+        <nav class="navigation">
+            <button class="nav-btn active" data-tab="simple-interest">Simple Interest</button>
+            <button class="nav-btn" data-tab="compound-interest">Compound Interest</button>
+            <button class="nav-btn" data-tab="loan-payment">Loan Payment</button>
+            <button class="nav-btn" data-tab="savings">Savings Goal</button>
+        </nav>
+
+        <main class="main-content">
+            <!-- Simple Interest Calculator -->
+            <div class="calculator-section active" id="simple-interest">
+                <div class="card">
+                    <h2 class="card-title">Simple Interest Calculator</h2>
+                    <div class="form-group">
+                        <label for="si-principal">Principal Amount ($)</label>
+                        <input type="number" id="si-principal" placeholder="Enter principal amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="si-rate">Annual Interest Rate (%)</label>
+                        <input type="number" id="si-rate" step="0.01" placeholder="Enter interest rate">
+                    </div>
+                    <div class="form-group">
+                        <label for="si-time">Time Period (years)</label>
+                        <input type="number" id="si-time" step="0.1" placeholder="Enter time in years">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateSimpleInterest()">Calculate</button>
+                    <div class="result" id="si-result"></div>
+                </div>
+            </div>
+
+            <!-- Compound Interest Calculator -->
+            <div class="calculator-section" id="compound-interest">
+                <div class="card">
+                    <h2 class="card-title">Compound Interest Calculator</h2>
+                    <div class="form-group">
+                        <label for="ci-principal">Principal Amount ($)</label>
+                        <input type="number" id="ci-principal" placeholder="Enter principal amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="ci-rate">Annual Interest Rate (%)</label>
+                        <input type="number" id="ci-rate" step="0.01" placeholder="Enter interest rate">
+                    </div>
+                    <div class="form-group">
+                        <label for="ci-time">Time Period (years)</label>
+                        <input type="number" id="ci-time" step="0.1" placeholder="Enter time in years">
+                    </div>
+                    <div class="form-group">
+                        <label for="ci-frequency">Compounding Frequency</label>
+                        <select id="ci-frequency">
+                            <option value="1">Annually</option>
+                            <option value="2">Semi-Annually</option>
+                            <option value="4">Quarterly</option>
+                            <option value="12">Monthly</option>
+                            <option value="365">Daily</option>
+                        </select>
+                    </div>
+                    <button class="calculate-btn" onclick="calculateCompoundInterest()">Calculate</button>
+                    <div class="result" id="ci-result"></div>
+                </div>
+            </div>
+
+            <!-- Loan Payment Calculator -->
+            <div class="calculator-section" id="loan-payment">
+                <div class="card">
+                    <h2 class="card-title">Loan Payment Calculator</h2>
+                    <div class="form-group">
+                        <label for="loan-amount">Loan Amount ($)</label>
+                        <input type="number" id="loan-amount" placeholder="Enter loan amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-rate">Annual Interest Rate (%)</label>
+                        <input type="number" id="loan-rate" step="0.01" placeholder="Enter interest rate">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-term">Loan Term (years)</label>
+                        <input type="number" id="loan-term" placeholder="Enter loan term">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateLoanPayment()">Calculate</button>
+                    <div class="result" id="loan-result"></div>
+                </div>
+            </div>
+
+            <!-- Savings Goal Calculator -->
+            <div class="calculator-section" id="savings">
+                <div class="card">
+                    <h2 class="card-title">Savings Goal Calculator</h2>
+                    <div class="form-group">
+                        <label for="savings-goal">Savings Goal ($)</label>
+                        <input type="number" id="savings-goal" placeholder="Enter your savings goal">
+                    </div>
+                    <div class="form-group">
+                        <label for="savings-rate">Annual Interest Rate (%)</label>
+                        <input type="number" id="savings-rate" step="0.01" placeholder="Enter interest rate">
+                    </div>
+                    <div class="form-group">
+                        <label for="savings-monthly">Monthly Contribution ($)</label>
+                        <input type="number" id="savings-monthly" placeholder="Enter monthly contribution">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateSavingsGoal()">Calculate</button>
+                    <div class="result" id="savings-result"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 BankCalc. Modern Financial Calculations Made Simple.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

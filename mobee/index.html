@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobee - Explore Phone Models</title>
+    <meta name="description" content="Search and explore popular phone models with detailed specifications">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="logo-text">Mobee</span>
+                </div>
+                <div class="theme-toggle">
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1 class="hero-title">Discover Your Perfect Phone</h1>
+                <p class="hero-subtitle">Search and explore popular phone models with detailed specifications</p>
+                
+                <!-- Search Section -->
+                <div class="search-section">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            class="search-input" 
+                            placeholder="Search for phone models, brands, or features..."
+                            autocomplete="off"
+                        >
+                        <button id="clear-search" class="clear-btn" aria-label="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Models Section -->
+            <section class="popular-section">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    Popular Models
+                </h2>
+                <div id="popular-grid" class="phone-grid">
+                    <!-- Popular phones will be populated here -->
+                </div>
+            </section>
+
+            <!-- Search Results Section -->
+            <section class="results-section" id="results-section" style="display: none;">
+                <h2 class="section-title">
+                    <i class="fas fa-search"></i>
+                    Search Results
+                </h2>
+                <div id="results-count" class="results-count"></div>
+                <div id="search-results" class="phone-grid">
+                    <!-- Search results will be populated here -->
+                </div>
+            </section>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No phones found</h3>
+                <p>Try adjusting your search terms or browse our popular models above.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Phone Detail Modal -->
+    <div id="phone-modal" class="modal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="phone-details" class="phone-details">
+                <!-- Phone details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="phones.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

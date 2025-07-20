@@ -1,8 +1,10 @@
 :root {
-  --bg: #EAF9E7;
-  --secondary: #C0E6BA;
+  --gradient-start: #EAF9E7;
+  --gradient-end: #C0E6BA;
   --accent: #4ACA71;
   --dark: #013237;
+  --bg: #EAF9E7;
+  --secondary: #C0E6BA;
 }
 
 * {
@@ -12,7 +14,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
   color: var(--dark);
 }
 
@@ -24,14 +26,15 @@ a {
 button {
   cursor: pointer;
   border: none;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #3abb65 100%);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: 600;
   transition: background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 button:hover {
-  background: #3abb65;
+  filter: brightness(1.05);
 }

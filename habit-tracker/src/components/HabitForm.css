@@ -6,7 +6,14 @@
 
 .habit-form input {
   flex-grow: 1;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 0.65rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.habit-form input:focus {
+  outline: 2px solid var(--accent);
 }

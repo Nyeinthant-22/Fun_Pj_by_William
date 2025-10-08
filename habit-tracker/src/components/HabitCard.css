@@ -1,0 +1,44 @@
+.habit-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f6fff8 100%);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.habit-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  color: var(--dark);
+  padding: 0;
+}
+
+.streak {
+  margin: 0.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.complete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.complete-btn.done {
+  background: var(--secondary);
+  color: var(--dark);
+}
